@@ -36,15 +36,15 @@ const stripe = require("stripe")(process.env.TEST_STRIPE_SECRET);
 
 
 
-app.get('/', function (req, res) {
-  res.send('Hello World!')
-});
+// app.get('/', function (req, res) {
+//   res.send('Hello World!')
+// });
 
-app.get('/test', function (req, res) {
-  res.json({
-    'test': 'Test Object'
-  });
-});
+// app.get('/test', function (req, res) {
+//   res.json({
+//     'test': 'Test Object'
+//   });
+// });
 
 app.post('/payment', (req, res) => {
   const reciptNumb = 'ST'+Math.floor(Math.random() * 1000000000);
